@@ -1,0 +1,59 @@
+<html>
+ <script src="calories_calc.js"></script> 
+<div id='harris' style="display: none;">
+    <input type="button" name="showHide" id="showHide" value="Switch to quick mode" onclick="showHide()" /><br />
+    <br />
+
+    <form action="#" name="calories_harrisbenedict" id="harrisbenedict_id" class="form_class">
+        <label>Weight (kg):</label> <input type="text" name="weight_hb" id="weight_hb" placeholder="kg" size="4" /><br />
+        <label>Height (cm):</label> <input type="text" name="height_hb" id="height_hb" placeholder="cm" size="4" /><br />
+        <label>Age (years):</label> <input type="text" name="age_hb" id="age_hb" placeholder="years" size="4" /><br />
+        <label>Gender:</label><br />
+        <input type="radio" name="gender_hb" id="gender_hb" value="male" /> Male<br />
+        <input type="radio" name="gender_hb" id="gender_hb" value="female" /> Female<br />
+        <input type="radio" name="gender_hb" id="gender_hb" value="other" /> Other<br />
+        <label>Activity level:</label><br />
+        <select name="activity" id="activity">
+            <option value="0.95">
+                None/sleeping
+            </option>
+            <option value="1.2">
+                Mostly lying e.g. sick people
+            </option>
+            <option value="1.4">
+                Mostly sitting e.g. desk job
+            </option>
+            <option value="1.6">
+                Mostly sitting e.g. pupils, taxi drivers
+            </option>
+            <option value="1.8">
+                Mostly standing e.g craftsmen, bartenders
+            </option>
+            <option value="2">
+                Strong physical labor e.g farmers
+            </option>
+        </select><br />
+        <br />
+        <input type="button" name="submit_harrisbenedict" id="submit_harrisbenedict" value="Submit" onclick="calculate_harrisbenedict()" />
+    </form>
+    <br />
+    <label>Your basal metabolic rate:</label> <span id='harris_b_output'>-</span>
+</div>
+
+<div id='easy' style="">
+    <input type="button" name="showHide" id="showHide" value="Switch to advanced mode" onclick="showHide()" /><br />
+    <br />
+
+    <form action="#" name="calories_simple" id="simple_id" class="form_class">
+        <label>Weight (kg):</label> <input type="text" name="weight_ez" id="weight_ez" placeholder="kg" size="4" /><br />
+        <label>Gender:</label><br />
+        <input type="radio" name="gender_ez" id="gender_ez" value="male" /> Male<br />
+        <input type="radio" name="gender_ez" id="gender_ez" value="female" /> Female<br />
+        <input type="radio" name="gender_ez" id="gender_ez" value="other" /> Other<br />
+        <br />
+        <input type="button" name="submit_simple" id="submit_simple" value="Submit" onclick="calculate_simple()" />
+    </form>
+    <br />
+    <label>Your basal metabolic rate:</label> <span id='easy_output'>-</span>
+</div>
+</html>
